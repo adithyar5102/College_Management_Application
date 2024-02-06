@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "558610663804",
+    "firebase_url": "https://collegemanagementapplication-default-rtdb.firebaseio.com",
+    "project_id": "collegemanagementapplication",
+    "storage_bucket": "collegemanagementapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558610663804:android:fe36267e2a98fdecf8fcf9",
+        "android_client_info": {
+          "package_name": "com.example.college_management_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDok3jrumvP3QDZfaxTVkGUxhfZyXNw_DM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
