@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/anb_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/add_posts"
+        android:title="Posts" />
+    <item
+        android:id="@+id/anb_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/email"
+        android:title="Mail" />
+    <item
+        android:id="@+id/anb_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/student"
+        android:title="Student" />
+    <item
+        android:id="@+id/anb_marks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/std_results"
+        android:title="Marks" />
+    <item
+        android:id="@+id/anb_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="More"
+        android:icon="@drawable/navbar_menu"
+        />
+</menu>

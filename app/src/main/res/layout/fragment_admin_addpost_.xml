@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_addpost_Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fragment_admin_addpost_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/image"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_admin_addpost_editText"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <Button
+            android:id="@+id/fragment_admin_addpost_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="20dp"
+            android:text="Select Image"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_admin_addpost_imageView" />
+
+        <EditText
+            android:id="@+id/fragment_admin_addpost_editText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Enter the post title"
+            android:inputType="text"
+            android:maxLines="6"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/fragment_admin_addpost_submit_btn"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="sans-serif"
+            android:text="Upload"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

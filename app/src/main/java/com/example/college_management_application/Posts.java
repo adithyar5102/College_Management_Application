@@ -1,7 +1,7 @@
 package com.example.college_management_application;
 
 public class Posts {
-    private String postId;
+    private int postId;
     private String postData;
     private String photoLink;
 
@@ -10,18 +10,18 @@ public class Posts {
     }
 
     // Constructor with postId, postData, and photoLink
-    public Posts(String postId, String postData, String photoLink) {
+    public Posts(int postId, String postData, String photoLink) {
         this.postId = postId;
         this.postData = postData;
         this.photoLink = photoLink;
     }
 
     // Getter and setter methods for postId, postData, and photoLink
-    public String getPostId() {
+    public int getPostId() {
         return postId;
     }
 
-    public void setPostId(String postId) {
+    public void setPostId(int postId) {
         this.postId = postId;
     }
 

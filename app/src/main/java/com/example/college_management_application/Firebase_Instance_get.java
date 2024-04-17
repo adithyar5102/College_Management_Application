@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -27,60 +28,107 @@ import java.io.IOException;
 
 public class Firebase_Instance_get {
     private DatabaseReference mdatabase;
-    private String Result;
+    private String Result = "Failed";
 
-    public String login_Student(UserAuth user,int YOP){
-        mdatabase = FirebaseDatabase.getInstance().getReference("Student_Auth");
-        mdatabase.child(user.getUsername()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+    public String login_Student(UserAuth user,int YOP,Activity context){
+    mdatabase = FirebaseDatabase.getInstance().getReference();
+    mdatabase.child(Integer.toString(YOP)+"_Student_Auth").addValueEventListener(new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot snapshot) {
+            for(DataSnapshot snap : snapshot.getChildren()){
+                UserAuth cur = snap.getValue(UserAuth.class);
+                try{
+                    if(cur.getUsername().equals(user.getUsername())){
+                        Log.d("Check1",cur.getUsername());
+                        if(cur.getPassword().equals(user.getPassword())){
 
-            @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                Firebase_Instance_get obj = new Firebase_Instance_get();
-                All_Data dobj = new All_Data();
-                 if(task.isSuccessful()){
-                     dobj.YOP = YOP;
-                     dobj.User_name = user.getUsername();
-                     obj.Result = "Success";
-                 }
-                 else{
-                     obj.Result = "Failed";
-                 }
+
+                        }
+                        else{
+                            Toast.makeText(context, "Username or Password is incorrect", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                }catch (Exception e){
+                    Log.d("Check1",e.toString());
+                }
             }
-        });
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError error) {
+            Toast.makeText(context, "Connectivity Error", Toast.LENGTH_SHORT).show();
+        }
+    });
+
         return Result;
     }
 
-    public String login_Faculty(UserAuth user){
-        mdatabase = FirebaseDatabase.getInstance().getReference("Faculty_Auth");
-        mdatabase.child(user.getUsername()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+    public String login_Faculty(UserAuth user, Activity context){
+        mdatabase = FirebaseDatabase.getInstance().getReference();
+        mdatabase.child("Faculty_Auth").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                Firebase_Instance_get obj = new Firebase_Instance_get();
-                if(task.isSuccessful()){
-                    obj.Result = "Success";
-                }
-                else{
-                    obj.Result = "Failed";
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    UserAuth cur = snap.getValue(UserAuth.class);
+                    try{
+                        if(cur.getUsername().equals(user.getUsername())){
+                            Log.d("Check1",cur.getUsername());
+                            if(cur.getPassword().equals(user.getPassword())){
+
+                            }
+                            else{
+                                Toast.makeText(context, "Username or Password is incorrect", Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    }catch (Exception e){
+                        Log.d("Check1",e.toString());
+                    }
                 }
             }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(context, "Connectivity Error", Toast.LENGTH_SHORT).show();
+            }
         });
+
         return Result;
+
     }
 
-    public String login_Admin(UserAuth user){
-        mdatabase = FirebaseDatabase.getInstance().getReference("Admin_Auth");
-        mdatabase.child(user.getUsername()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+    public String login_Admin(UserAuth user,Activity context){
+        mdatabase = FirebaseDatabase.getInstance().getReference();
+        mdatabase.child("Admin_Auth").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                Firebase_Instance_get obj = new Firebase_Instance_get();
-                if(task.isSuccessful()){
-                    obj.Result = "Success";
-                }
-                else{
-                    obj.Result = "Failed";
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    UserAuth cur = snap.getValue(UserAuth.class);
+                    try{
+                        if(cur.getUsername().equals(user.getUsername())){
+                            Log.d("Check1",cur.getUsername());
+                            if(cur.getPassword().equals(user.getPassword())){
+                                Activity_Sign_in obj = new Activity_Sign_in();
+
+                            }
+                            else{
+                                Toast.makeText(context, "Username or Password is incorrect", Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    }catch (Exception e){
+                        Log.d("Check1",e.toString());
+                    }
                 }
             }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(context, "Connectivity Error", Toast.LENGTH_SHORT).show();
+            }
         });
+
         return Result;
     }
 
@@ -91,9 +139,9 @@ public class Firebase_Instance_get {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     for(DataSnapshot snap : snapshot.getChildren()){
-                        Posts current = snap.getValue(Posts.class);
-                        get_post_image(current.getPostId(),context);
-                        data_obj.Posts_list.add(current);
+                        //Posts current = snap.getValue(Posts.class);
+                        //get_post_image(current.getPostId(),context);
+                        //data_obj.Posts_list.add(current);
                     }
                 }
                 @Override

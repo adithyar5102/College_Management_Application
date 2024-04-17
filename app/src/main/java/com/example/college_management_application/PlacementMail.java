@@ -1,7 +1,7 @@
 package com.example.college_management_application;
 
 public class PlacementMail {
-    private String mailId;
+    private int mailId;
     private String company;
     private String description;
     private String photoLink;
@@ -9,26 +9,29 @@ public class PlacementMail {
 
     private String Form_link;
 
+    int yop;
+
     // Empty constructor
     public PlacementMail() {
     }
 
     // Constructor with mailId, company, description, photoLink, and fileLink
-    public PlacementMail(String mailId, String company, String description, String photoLink, String fileLink,String Form_link) {
+    public PlacementMail(int mailId, String company, String description, String photoLink, String fileLink,String Form_link,int yop) {
         this.mailId = mailId;
         this.company = company;
         this.description = description;
         this.photoLink = photoLink;
         this.fileLink = fileLink;
         this.Form_link = Form_link;
+        this.yop = yop;
     }
 
     // Getter and setter methods for mailId, company, description, photoLink, and fileLink
-    public String getMailId() {
+    public int getMailId() {
         return mailId;
     }
 
-    public void setMailId(String mailId) {
+    public void setMailId(int mailId) {
         this.mailId = mailId;
     }
 
@@ -70,6 +73,13 @@ public class PlacementMail {
 
     public void setForm_link(String form_link) {
         Form_link = form_link;
+    }
+    public int getYop() {
+        return yop;
+    }
+
+    public void setYop(int yop) {
+        this.yop = yop;
     }
 }
 

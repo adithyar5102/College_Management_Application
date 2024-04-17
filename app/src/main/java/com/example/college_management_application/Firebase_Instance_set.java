@@ -40,7 +40,7 @@ public class Firebase_Instance_set {
                  Firebase_Instance_set obj = new Firebase_Instance_set();
                  All_Data dobj = new All_Data();
                  if (task.isSuccessful()){
-                     mdatabase.child("Student_Auth").child(user.getUsername()).setValue(user);
+                     mdatabase.child(Integer.toString(YOP)+"_Student_Auth").child(user.getUsername()).setValue(user);
                      dobj.User_name = user.getUsername();
                      dobj.YOP = YOP;
                      obj.Result = "Success";
@@ -53,10 +53,7 @@ public class Firebase_Instance_set {
          return Result;
      }
 
-     public void set_Faculty_Auth(UserAuth user){
-         mdatabase = FirebaseDatabase.getInstance().getReference();
-         mdatabase.child("Faculty_Auth").child(user.getUsername()).setValue(user);
-    }
+
 
     public void set_Admin_Auth(UserAuth user){
         mdatabase = FirebaseDatabase.getInstance().getReference();
@@ -70,9 +67,9 @@ public class Firebase_Instance_set {
              public void onDataChange(@NonNull DataSnapshot snapshot) {
                  Posts value = snapshot.getValue(Posts.class);
                  assert value != null;
-                 int new_id = Integer.parseInt(value.getPostId().split("_")[1]);
-                 post.setPostId("post_"+Integer.toString(new_id-1));
-                 mdatabase.child("Posts").child(post.getPostId()).setValue(post);
+               //  int new_id = Integer.parseInt(value.getPostId().split("_")[1]);
+                // post.setPostId("post_"+Integer.toString(new_id-1));
+                 //mdatabase.child("Posts").child(post.getPostId()).setValue(post);
              }
 
              @Override
@@ -92,7 +89,7 @@ public class Firebase_Instance_set {
 
     public void set_Placement_mail(PlacementMail mail){
          mdatabase = FirebaseDatabase.getInstance().getReference();
-         mdatabase.child("Placement_mail").child(mail.getMailId()).setValue(mail);
+         //mdatabase.child("Placement_mail").child(mail.getMailId()).setValue(mail);
     }
 
     public void set_Subjects(Subjects subject){
@@ -105,7 +102,7 @@ public class Firebase_Instance_set {
          for(Attendance student : list){
              mdatabase.child(Integer.toString(YOP)+"_"+Branch+"_"+Section).child(student.getUsn()).setValue(student);
          }
-         Attendance tot = new Attendance("Total_Class",0,0,0,0,0,0,0,0,0,0);
+         Attendance tot = new Attendance("Total_Class");
          mdatabase.child(Integer.toString(YOP)+"_"+Branch+"_"+Section).child("Total_Class").setValue(tot);
 
     }

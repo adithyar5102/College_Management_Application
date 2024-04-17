@@ -6,4 +6,130 @@
     android:layout_height="match_parent"
     tools:context=".Activity_Sign_up">
 
+    <TextView
+        android:id="@+id/signup_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Sign Up"
+        android:textColor="#1C4980"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signup_name"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="USN"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_text" />
+
+
+    <EditText
+        android:id="@+id/signup_password"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_name" />
+
+    <EditText
+        android:id="@+id/signup_confirm_password"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Conform Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_password" />
+
+    <EditText
+        android:id="@+id/signup_YOP"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Year of passing"
+        android:inputType = "number"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_confirm_password" />
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="sign up"
+        android:textColorHighlight="#1C4980"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_YOP" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+
+            />
+
+        <TextView
+            android:id="@+id/sign_up_sign_in_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" sign in"
+            android:textColor="@color/DefaultBlue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

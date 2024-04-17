@@ -11,12 +11,13 @@ public class Student {
     private String Email;
     private int sem;
 
+    private String sec;
     // Empty constructor
     public Student() {
     }
 
     // Constructor with usn, firstName, midName, lastName, YOP, and branch
-    public Student(String usn, String firstName, String midName, String lastName, int YOP, String branch, String Phone_number,String Email ,int sem) {
+    public Student(String usn, String firstName, String midName, String lastName, int YOP, String branch, String Phone_number,String Email ,int sem,String sec) {
         this.usn = usn;
         this.firstName = firstName;
         this.midName = midName;
@@ -26,6 +27,7 @@ public class Student {
         this.sem = sem;
         this.Phone_number = Phone_number;
         this.Email = Email;
+        this.sec = sec;
     }
 
     // Getter and setter methods for usn, firstName, midName, lastName, YOP, and branch
@@ -99,6 +101,14 @@ public class Student {
 
     public void setSem(int sem) {
         this.sem = sem;
+    }
+
+    public String getSec() {
+        return sec;
+    }
+
+    public void setSec(String sec) {
+        this.sec = sec;
     }
 }
 

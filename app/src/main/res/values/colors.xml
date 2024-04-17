@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="DefaultBlue">#1C4980</color>
+    <color name="postsgrey">#50727B</color>
+    <color name="green">#17ad6c</color>
+    <color name="lightblue">#3ea8a8</color>
+    <color name="linkblue">#0148FA</color>
 </resources>

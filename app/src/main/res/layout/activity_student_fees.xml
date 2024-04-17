@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Student_fees">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/student_fees_1_year"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Year"/>
+
+                <TextView
+                    android:id="@+id/student_fees_1_total_fees"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"/>
+
+                <TextView
+                    android:id="@+id/student_fees_1_paid"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid"/>
+
+                <Button
+                    android:id="@+id/student_fees_1_pay_button"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_button"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pay"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/student_fees_2_year"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Year"/>
+
+                <TextView
+                    android:id="@+id/student_fees_2_total_fees"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"/>
+
+                <TextView
+                    android:id="@+id/student_fees_2_paid"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid"/>
+
+                <Button
+                    android:id="@+id/student_fees_2_pay_button"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_button"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pay"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/student_fees_3_year"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Year"/>
+
+                <TextView
+                    android:id="@+id/student_fees_3_total_fees"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"/>
+
+                <TextView
+                    android:id="@+id/student_fees_3_paid"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid"/>
+
+                <Button
+                    android:id="@+id/student_fees_3_pay_button"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_button"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pay"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/student_fees_4_year"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Year"/>
+
+                <TextView
+                    android:id="@+id/student_fees_4_total_fees"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"/>
+
+                <TextView
+                    android:id="@+id/student_fees_4_paid"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid"/>
+
+                <Button
+                    android:id="@+id/student_fees_4_pay_button"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_button"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pay"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
