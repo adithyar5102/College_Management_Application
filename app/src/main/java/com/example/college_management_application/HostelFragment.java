@@ -87,11 +87,15 @@ public class HostelFragment extends Fragment {
             mdatabase.child("Hostel").child(usn).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    Hostel_student std = snapshot.getValue(Hostel_student.class);
-                    fnameTextView.setText("Name : "+std.getFirstName());
-                    lnameTextView.setText("Last Name : "+std.getLastName());
-                    blockTextView.setText("Hostel Block : "+std.getHostelBlock());
-                    roomnoTextView.setText("Room Number : "+std.getRoomNumber());
+                    try {
+                        Hostel_student std = snapshot.getValue(Hostel_student.class);
+                        fnameTextView.setText("Name : " + std.getFirstName());
+                        lnameTextView.setText("Last Name : " + std.getLastName());
+                        blockTextView.setText("Hostel Block : " + std.getHostelBlock());
+                        roomnoTextView.setText("Room Number : " + std.getRoomNumber());
+                    }catch (Exception e){
+                        fnameTextView.setText("Not an Hostelite");
+                    }
                 }
 
                 @Override

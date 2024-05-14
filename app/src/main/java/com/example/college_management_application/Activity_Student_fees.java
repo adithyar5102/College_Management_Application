@@ -103,4 +103,11 @@ public class Activity_Student_fees extends AppCompatActivity {
         binding.studentFees4TotalFees.setText(Double.toString(userfees.getYear4_total()));
         binding.studentFees4Paid.setText(Double.toString(userfees.getYear4_paid()));
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(Activity_Student_fees.this, MainActivity.class);
+        startActivity(i);
+    }
 }

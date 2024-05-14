@@ -58,12 +58,13 @@ public class Activity_get_certificates extends AppCompatActivity {
 
         if (outputFile != null) {
             //File finalOutputFile = outputFile;
-            File finalOutputFile = new File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), username + "_" + sem + ".png");
+            File finalOutputFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), username + "_" + sem + ".png");
             storageRef.child(year+"_Certificates/"+username+"_"+sem+".png").getFile(finalOutputFile)
                     .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                             // File downloaded successfully
+
                             Toast.makeText(getApplicationContext(), "Image downloaded to " + finalOutputFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
@@ -72,6 +73,7 @@ public class Activity_get_certificates extends AppCompatActivity {
                             // Handle any errors
                             Log.d("check1",exception.toString());
                             Toast.makeText(getApplicationContext(), "Failed to download image", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Activity_get_certificates.this, "Certificate Might Not Exist", Toast.LENGTH_SHORT).show();
                         }
                     });
         }

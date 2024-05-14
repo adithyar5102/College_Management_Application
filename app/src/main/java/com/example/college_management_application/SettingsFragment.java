@@ -79,7 +79,7 @@ public class SettingsFragment extends Fragment {
     All_Data obj = new All_Data();
     View v;
     private TextView fname, mname, lname, usn, branch, sem;
-    Button certificates,fees;
+    Button certificates,fees,logout;
     private TextView[] subjects = new TextView[10];
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -93,7 +93,7 @@ public class SettingsFragment extends Fragment {
         sem = view.findViewById(R.id.fragment_settings_sem);
         certificates = view.findViewById(R.id.fragment_settings_certificate_button);
         fees = view.findViewById(R.id.fragment_settings_fees_button);
-
+        logout = view.findViewById(R.id.fragment_settings_logout_button);
         // Initialize subject TextViews
         subjects[0] = view.findViewById(R.id.fragment_settings_sub1);
         subjects[1] = view.findViewById(R.id.fragment_settings_sub2);
@@ -123,6 +123,14 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(view.getContext(),Activity_Student_fees.class);
+                startActivity(i);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(view.getContext(),Activity_Sign_in.class);
                 startActivity(i);
             }
         });

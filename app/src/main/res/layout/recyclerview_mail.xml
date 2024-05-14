@@ -41,7 +41,7 @@
                 android:id="@+id/rv_mail_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLength="70"
+                android:maxLength="35"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif"
                 android:textStyle="italic"

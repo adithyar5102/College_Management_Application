@@ -111,4 +111,6 @@ public class Activity_Sign_up extends AppCompatActivity {
             }
         });
     }
+    public void onBackPressed() {
+    }
 }

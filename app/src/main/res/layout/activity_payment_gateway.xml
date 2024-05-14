@@ -10,7 +10,7 @@
         android:id="@+id/payment_gateway_topay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
         android:text="TextView"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -20,34 +20,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/payment_gateway_success_button"
-        android:layout_width="120dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:fontFamily="sans-serif"
-        android:layout_margin="10dp"
-        android:text="Success"
-        android:textColor="@color/white"
-        android:textColorHighlight="#1C4980"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/payment_gateway_fail_button"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:fontFamily="sans-serif"
-        android:layout_margin="10dp"
-        android:text="Failed"
-        android:textColor="@color/white"
-        android:textColorHighlight="#1C4980"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/payment_gateway_success_button"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_gateway_topay">
+
+        <EditText
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card Number"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/expiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Expiry Date (MM/YYYY)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/cvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CVV"
+            android:inputType="numberPassword" />
+
+        <Button
+            android:id="@+id/payment_gateway_success_button"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="sans-serif"
+            android:text="Pay"
+            android:textColor="@color/white"
+            android:textColorHighlight="#1C4980"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

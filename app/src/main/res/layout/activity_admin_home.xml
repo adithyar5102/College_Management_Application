@@ -8,12 +8,10 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/arrow"
-        android:backgroundTint="@color/postsgrey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />

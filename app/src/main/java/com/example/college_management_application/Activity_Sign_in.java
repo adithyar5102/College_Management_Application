@@ -211,4 +211,7 @@ public class Activity_Sign_in extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+    }
 }

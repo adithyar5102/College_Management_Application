@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.college_management_application.databinding.ActivityAdminHomeBinding;
 
@@ -38,6 +40,14 @@ import com.example.college_management_application.databinding.ActivityAdminHomeB
                 binding.AdminTextView.setText("Add Students");
             }
             return true;
+        });
+
+        binding.button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Admin_Activity_Home.this,Activity_Sign_in.class);
+                startActivity(intent);
+            }
         });
     }
 

@@ -29,12 +29,7 @@ public class Payment_gateway extends AppCompatActivity {
         binding.paymentGatewayTopay.setText(Double.toString(topay));
         yop = SharedPrefManager.getInstance(Payment_gateway.this).getYear();
         username = SharedPrefManager.getInstance(Payment_gateway.this).getUsername();
-        binding.paymentGatewayFailButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onpaymentfailure();
-            }
-        });
+
         binding.paymentGatewaySuccessButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +51,4 @@ public class Payment_gateway extends AppCompatActivity {
         Intent i =  new Intent(Payment_gateway.this,Activity_Student_fees.class);
         startActivity(i);
     }
-
-
 }

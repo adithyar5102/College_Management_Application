@@ -77,27 +77,27 @@ public class Activity_validate_certificate extends AppCompatActivity {
                 marks = stdmarks.getSem1();
                 break;
             case "2":
-                marks = stdmarks.getSem1();
+                marks = stdmarks.getSem2();
                 break;
             case "3":
-                marks = stdmarks.getSem1();
+                marks = stdmarks.getSem3();
                 break;
             case "4":
-                marks = stdmarks.getSem1();
+                marks = stdmarks.getSem4();
                 break;
             case "5":
-                marks = stdmarks.getSem1();
+                marks = stdmarks.getSem5();
                 break;
             case "6":
-                marks = stdmarks.getSem1();
+                marks = stdmarks.getSem6();
                 break;
 
             case "7":
-                marks = stdmarks.getSem1();
+                marks = stdmarks.getSem7();
                 break;
 
             case "8":
-                marks = stdmarks.getSem1();
+                marks = stdmarks.getSem8();
                 break;
             default:
                 Toast.makeText(Activity_validate_certificate.this, "Enter valid semester", Toast.LENGTH_SHORT).show();

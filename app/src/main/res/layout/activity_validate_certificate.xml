@@ -7,7 +7,7 @@
     tools:context=".Activity_validate_certificate">
 
     <TextView
-        android:id="@+id/validate_certificate_text"
+        android:id="@+id/validate_certificate_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Enter USN/year of passing/semester"
@@ -24,7 +24,7 @@
 
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/validate_certificate_text" />
+        app:layout_constraintTop_toBottomOf="@+id/validate_certificate_text1" />
 
     <Button
         android:id="@+id/validate_certificate_btn"
@@ -37,5 +37,19 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/validate_certificate_usn" />
+
+    <TextView
+        android:id="@+id/validate_certificate_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/validate_certificate_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

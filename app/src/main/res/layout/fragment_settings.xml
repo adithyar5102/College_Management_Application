@@ -180,6 +180,15 @@
                 android:textColor="@color/white"
                 android:text="Fees"/>
 
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/fragment_settings_logout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/white"
+                android:text="Log out"/>
 
         </LinearLayout>
 

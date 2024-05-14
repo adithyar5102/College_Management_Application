@@ -22,9 +22,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -37,58 +39,53 @@
                 android:id="@+id/mail_indetail_company_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Company name"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif"
+                android:text="Company name"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/mail_indetail_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="30dp"
                 android:layout_marginTop="20dp"
-                android:text="desription"
                 android:fontFamily="sans-serif"
-                android:textSize="16sp"
-                />
+                android:paddingStart="30dp"
+                android:text="desription"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/mail_indetail_link"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="25dp"
-                android:textStyle="bold"
-                android:text="link"
                 android:autoLink="web"
+                android:text="link"
                 android:textColor="@color/linkblue"
-                />
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/mail_indetail_image"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:layout_margin="20dp"
-                android:src="@drawable/image"
-                />
+                android:src="@drawable/image" />
+
             <Button
                 android:id="@+id/mail_indetail_download_pdf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
                 android:background="@drawable/rounded_button"
-                android:textColor="@color/white"
                 android:text="download pdf"
-                />
+                android:textColor="@color/white" />
 
         </LinearLayout>
-
 
 
     </ScrollView>
